@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/41f4fd74e6.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+          integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Nunito', sans-serif;
+        }
+
+        body {
+            background-color: #F5F6F6;
+        }
+
+        a {
+            color: darkgray;
+
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .box {
+            display: flex;
+            flex-flow: row;
+            height: 100vh;
+            align-items: flex-start;
+            justify-content: flex-start;
+        }
+
+        .left-Panel {
+            width: 400px;
+            height: 100vh;
+            display: flex;
+            flex-flow: column;
+            justify-content: space-between;
+            align-items: center;
+            color: darkgray;
+            border-right: 1px solid darkgray;
+            margin-left: 50px;
+            padding: 75px;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+
+        }
+
+        .marka {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: 10px;
+            color: #3383FF;
+            text-shadow: 2px 2px 3px rgba(255, 255, 255, 0.1);
+            align-self: center;
+
+        }
+
+        .Menu {
+            width: 100%;
+        }
+
+        .left-Panel-Menu li {
+            list-style: none;
+            margin-bottom: 30px;
+
+        }
+
+        .left-Panel-Menu li :nth-last-child() {
+            list-style: none;
+            margin-bottom: 0;
+
+        }
+
+        .left-Panel-Link {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 13px;
+            font-weight: 600;
+        }
+
+        .left-Panel-Link:hover {
+            background-color: white;
+            border-radius: 20px;
+            text-align: center;
+            text-decoration: none !important;
+            font-size: 1.5rem;
+            padding: 13px;
+            font-weight: 600;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09), 0 2px 1px rgba(0, 0, 0, 0);
+        }
+
+        .left-Panel-Link-Selected {
+            color: #3383FF;
+        }
+
+        .left-Panel-Agala {
+            background-image: linear-gradient(to left, #56CCF2 0%, #2F80ED 51%, #56CCF2 100%);
+
+        }
+
+        .left-Panel-Agala {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            transition: .75s;
+            background-size: 200% auto;
+            color: whitesmoke;
+            box-shadow: 0 0 20px #eee;
+
+            cursor: pointer;
+            border-radius: 20px;
+            width: 100%;
+            display: block;
+            font-size: 1.5rem;
+            border: none;
+            font-weight: 700;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.22), 0 4px 8px rgba(0, 0, 0, 0.11);
+        }
+
+        .left-Panel-Agala:hover {
+            background-position: right top; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .fas {
+            margin-right: 10px;
+        }
+
+        .cikisYap {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            padding: 10px;
+            align-items: center;
+            text-align: center;
+            cursor: pointer;
+            font-weight: 700;
+            justify-self: flex-end;
+            align-self: flex-end;
+            width: 100%;
+        }
+
+        .cikisYap:hover {
+            background-color: white;
+            border-radius: 20px;
+            color: #0056B3;
+            text-decoration: none !important;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.09), 0 2px 1px rgba(0, 0, 0, 0);
+
+        }
+
+        .cikisYap-Text {
+            display: flex;
+            flex-flow: column;
+            margin-right: 20px;
+
+        }
+
+
+        .cikisYap-Foto {
+            text-align: center;
+            align-self: center;
+            margin-right: 10px;
+        }
+
+        .main-Panel {
+            display: flex;
+            flex-flow: column;
+            width: 50%;
+            margin-left: 450px;
+            border-right: 1px solid gray;
+        }
+
+
+        .panel-Agala {
+            display: flex;
+            flex-flow: row;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 15px;
+            padding: 20px 20px;
+        }
+
+        .panel-Agala-Foto {
+            align-self: flex-start;
+        }
+
+        .panel-Agala-Text {
+
+            margin-left: 10px;
+            width: 100%;
+        }
+
+        .Agala-Text {
+            font-size: 24px;
+            background-color: #F5F6F6;
+            color: black;
+            border: none;
+            outline: 0;
+            overflow: auto;
+            resize: none;
+            width: 85%;
+        }
+
+        .panel-Agala-Gonder {
+            padding-bottom: 10px;
+            display: flex;
+            flex-flow: row;
+            border-bottom: 1px solid gray;
+        }
+
+        .Agala-Secenekler {
+            margin-left: 80px;
+        }
+
+        .Agala-Sec {
+            font-size: 25px;
+            margin-left: 10px;
+        }
+
+        .btn-agala {
+            font-size: 20px;
+            border-radius: 15px;
+            margin-left: auto;
+            margin-right: 150px;
+        }
+
+
+        .aga {
+            width: 100%;
+            height: 400px;
+            border-bottom: 1px solid gray;
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            overflow: auto;
+            padding: 20px 20px;
+        }
+
+        .aga:hover {
+            background-color: white;
+        }
+
+        .aga-Sol {
+
+            justify-self: flex-start;
+            margin-right: 10px;
+        }
+
+        .aga-Main {
+            display: flex;
+            flex-flow: column;
+            font-size: 20px;
+
+
+        }
+
+        .aga-Main-Ust {
+            display: flex;
+            flex-flow: row;
+
+        }
+
+        .aga-Main-Ust-Isim {
+            font-weight: 700;
+            margin-right: 5px;
+            cursor: pointer;
+        }
+
+        .aga-Main-Ust-Isim:hover {
+            text-decoration: underline;
+
+        }
+
+        .aga-Main-Ust-Kullanıcı {
+            font-size: 18px;
+            color: darkgray;
+            margin-right: 5px;
+        }
+
+        .aga-Main-Ust-Tarih {
+            font-size: 18px;
+            color: darkgray;
+        }
+
+        .aga-Main-Icerik {
+            margin-right: 60px;
+            margin-top: 10px;
+        }
+
+        .aga-Sag {
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .aga-Main-Action {
+            display: flex;
+            flex-flow: row;
+            font-size: 22px;
+            justify-content: flex-start;
+            align-items: center;
+
+        }
+
+        .aga-Main-Action-Like {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            margin-right: 15px;
+
+        }
+
+        .aga-Main-Action-Like-Text {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+        .aga-Main-Action-Share {
+            display: flex;
+            flex-flow: row;
+            justify-content: flex-start;
+            margin-right: 15px;
+        }
+
+        .aga-Main-Action-Share-Text {
+            font-size: 18px;
+            margin-left: 5px;
+        }
+
+
+    </style>
+</head>
+<body onload="init();">
+
+    <div class="">
+
+        <div class="box">
+            <div class="left-Panel">
+                <div class="marka">
+                    AGAMLA
+                </div>
+                <div class="Menu">
+                    <ul class="left-Panel-Menu">
+                        <li>
+                            <a href="" class="left-Panel-Link left-Panel-Link-Selected"><i class="fas fa-home"></i>Anasayfa</a>
+                        </li>
+                        <li>
+                            <a href="" class="left-Panel-Link"><i class="fas fa-envelope"></i>Mesajlar</a>
+                        </li>
+                        <li>
+                            <a href="" class="left-Panel-Link"><i class="fas fa-user-alt"></i>Profil</a>
+                        </li>
+                        <li>
+                            <a href="" class="left-Panel-Link"><i class="fas fa-save"></i>Kaydedilenler</a>
+                        </li>
+                        <li>
+                            <a href="" class="left-Panel-Link"><i class="fas fa-cog"></i>Ayarlar</a>
+                        </li>
+                    </ul>
+                    <div class="left-Panel-Agala">Agala</div>
+                </div>
+
+                <div class="cikisYap">
+                    <div class="cikisYap-Foto">
+                        <img width="40px"
+                             src="https://pbs.twimg.com/profile_images/1340380551484747778/-7Jz1MOp_400x400.jpg"
+                             alt="profilResim" style="border-radius: 20px;">
+                    </div>
+                    <div class="cikisYap-Text">
+                        <div class="cikisYap-Profil-Ismi">
+                            Asım Kaymak
+                        </div>
+                        <div class="cikisYap-Profil-Username">
+                            @asimkymk
+                        </div>
+
+                    </div>
+                    <div class="cikisYap-Cikis">
+                        ...
+                    </div>
+
+                </div>
+
+            </div>
+            <div class="main-Panel">
+
+
+
+            <div class="right-Panel">
+                ARAMA YERİ <br>
+                HAKKINDA <br>
+                HİZMET ŞARTLARI <br>
+                İLETİŞİM <br>
+                2021 AGALAR <br>
+
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"
+            integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF"
+            crossorigin="anonymous"></script>
+    <script>
+        var observe;
+        if (window.attachEvent) {
+            observe = function (element, event, handler) {
+                element.attachEvent('on' + event, handler);
+            };
+        } else {
+            observe = function (element, event, handler) {
+                element.addEventListener(event, handler, false);
+            };
+        }
+
+        function init() {
+            var text = document.getElementById('text');
+
+            function resize() {
+                text.style.height = 'auto';
+                text.style.height = text.scrollHeight + 'px';
+            }
+
+            /* 0-timeout to get the already changed text */
+            function delayedResize() {
+                window.setTimeout(resize, 0);
+            }
+
+            observe(text, 'change', resize);
+            observe(text, 'cut', delayedResize);
+            observe(text, 'paste', delayedResize);
+            observe(text, 'drop', delayedResize);
+            observe(text, 'keydown', delayedResize);
+
+            text.focus();
+            text.select();
+            resize();
+        }
+
+    </script>
+</body>
+</html>

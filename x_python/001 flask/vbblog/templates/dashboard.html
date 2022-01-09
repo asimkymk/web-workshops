@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block body %}
+<h3>Kontrol Paneli</h3>
+<small>Hoş Geldiniz, {{session["username"]}}</small>
+<hr>
+<a href="/addarticle" class="btn btn-danger">Makale Ekle</a>
+<hr>
+{% if myarticles %}
+
+<h5>Size Ait Makaleler</h5>
+    
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Makale Başlığı</th>
+      <th scope="col">Makale Yazari</th>
+      <th scope="col">Makale Tarihi</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for article in myarticles %}
+        <tr>
+            <th >{{article['id']}}</th>
+            <td >{{article['title']}}</td>
+            <td >{{article['author']}}</td>
+            <td >{{article['created_date']}}</td>
+            <td><a href="/edit/{{article.id}}" class="btn btn-warning btn-sm">Makaleyi Güncelle</a></td>
+            <td><a href="/delete/{{article.id}}" class="btn btn-danger btn-sm">Makaleyi Sil</a></td>
+        </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<div class="alert alert-warning">
+    Henüz size ait bir makale bulunmuyor.
+
+</div>
+{% endif %}
+
+{% endblock body %}

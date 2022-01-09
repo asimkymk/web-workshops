@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <title>Hello, world!</title>
+</head>
+<body>
+
+    <div class="container mt-2">
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="card">
+                    <img class="card-img-top"
+                         src="https://raw.githubusercontent.com/sadikturan/komple-web-gelistirme-dersleri/master/src/9-Javascript/4-Dom%20Projesi-%20Slider/4-Rastgele%20Slider%20%26%20Slider%20Ge%C3%A7i%C5%9F%20S%C3%BCresi%20Ayar%C4%B1/img/bmw.jpg"
+                         alt="">
+                    <div class="card-body">
+                        <h5 class="card-title">Bmw 116d</h5>
+                        <p class="card-text"></p>
+                        <a class="card-link" href="#">Read More</a>
+                    </div>
+                    <div class="card-footer">
+                        <i class="fas fa-arrow-left fa-2x"></i>
+                        <i class="fas fa-arrow-right fa-2x"></i>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <script>
+
+        var models = [
+            {
+                name: 'Bmw 418d',
+                image: 'https://raw.githubusercontent.com/sadikturan/komple-web-gelistirme-dersleri/master/src/9-Javascript/4-Dom%20Projesi-%20Slider/4-Rastgele%20Slider%20%26%20Slider%20Ge%C3%A7i%C5%9F%20S%C3%BCresi%20Ayar%C4%B1/img/bmw.jpg',
+                link: 'http://www.arabalar.com.tr/bmw/4-serisi/2018/418d-2-0-gran-coupe'
+            },
+            {
+                name: 'Mazda CX-3',
+                image: 'https://raw.githubusercontent.com/sadikturan/komple-web-gelistirme-dersleri/master/src/9-Javascript/4-Dom%20Projesi-%20Slider/4-Rastgele%20Slider%20%26%20Slider%20Ge%C3%A7i%C5%9F%20S%C3%BCresi%20Ayar%C4%B1/img/mazda.jpg',
+                link: 'http://www.arabalar.com.tr/mazda/cx-3/2017/1-5-sky-d-motion'
+            },
+            {
+                name: 'Volvo S60',
+                image: 'https://raw.githubusercontent.com/sadikturan/komple-web-gelistirme-dersleri/master/src/9-Javascript/4-Dom%20Projesi-%20Slider/4-Rastgele%20Slider%20%26%20Slider%20Ge%C3%A7i%C5%9F%20S%C3%BCresi%20Ayar%C4%B1/img/volvo.jpg',
+                link: 'http://www.arabalar.com.tr/volvo/s60/2018/1-5-t3-advance'
+            },
+            {
+                name: 'Skoda Superb',
+                image: 'https://raw.githubusercontent.com/sadikturan/komple-web-gelistirme-dersleri/master/src/9-Javascript/4-Dom%20Projesi-%20Slider/4-Rastgele%20Slider%20%26%20Slider%20Ge%C3%A7i%C5%9F%20S%C3%BCresi%20Ayar%C4%B1/img/skoda.jpg',
+                link: 'http://www.arabalar.com.tr/skoda/superb/2018/1-4-tsi-active'
+            },
+            {
+                name: 'Honda Civic',
+                image: 'https://raw.githubusercontent.com/sadikturan/komple-web-gelistirme-dersleri/master/src/9-Javascript/4-Dom%20Projesi-%20Slider/4-Rastgele%20Slider%20%26%20Slider%20Ge%C3%A7i%C5%9F%20S%C3%BCresi%20Ayar%C4%B1/img/honda.jpg',
+                link: 'http://www.arabalar.com.tr/honda/civic/2018/1-6-elegance'
+            }
+        ];
+        var index = 0;
+        const click = document.querySelector(".card-footer");
+
+        function showModel(index) {
+            const resim = document.querySelector(".card-img-top");
+            resim.setAttribute("src", models[index].image);
+            const isim = document.querySelector(".card-title");
+            isim.childNodes[0].textContent = models[index].name;
+            const link = document.querySelector(".card-link");
+            link.setAttribute("href", models[index].link);
+
+        }
+
+        click.addEventListener("click", function (e) {
+            if (e.target.className == "fas fa-arrow-right fa-2x") {
+                if (index < 4) {
+                    index++;
+                    showModel(index);
+                    e.preventDefault();
+                }
+            } else if (e.target.className == "fas fa-arrow-left fa-2x") {
+                if (index > 0) {
+                    index--;
+                    showModel(index);
+                    e.preventDefault();
+                }
+            }
+        });
+        var interval;
+        var settings = {
+            duration: "2000",
+            random: true,
+        };
+        init(settings);
+
+        function init(settings) {
+            interval = setInterval(function () {
+                if (index == 4) {
+                    index = 0;
+                } else index++;
+                showModel(index);
+            }, settings.duration)
+        }
+
+        const durdur = document.querySelector(".card");
+        durdur.addEventListener("mouseenter", function (e) {
+            clearInterval(interval);
+        });
+        durdur.addEventListener("mouseleave", function (e) {
+            init(settings);
+        });
+
+
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+</body>
+</html>
+

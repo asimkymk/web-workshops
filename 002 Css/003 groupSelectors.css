@@ -1,0 +1,32 @@
+/*
+*{
+    border:1px solid blue;
+}
+
+p{
+    border: 1px solid red;
+}
+
+.container div.box{
+    border:1px solid red;
+}
+
+div  p{
+    border: 1px solid blue;
+}
+
+div,p {
+    border: 1px solid blue;
+}
+div>p{
+    border:1px solid blue;
+}
+p~div{
+    border: 1px solid blue;
+}
+
+*/
+
+p+div{
+    border:1px solid blue;
+}

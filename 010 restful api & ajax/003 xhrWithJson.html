@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Uygulama/css/bootstrap.css">
+    <style>
+        #loading {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button id="getEmployee" class="btn btn-primary">Get Employee</button>
+                <button id="getEmployees" class="btn btn-primary">Get Employees</button>
+                <div id="loading">
+                    Yükleniyor...
+                </div>
+                <table class="mt-3 table table-bordered table-striped">
+                    <thead>
+                    <tr>
+                        <th>İsim</th>
+                        <th>Soyisim</th>
+                        <th>Yaş</th>
+                        <th>Emekli Durum</th>
+                    </tr>
+                    </thead>
+                    <tbody id="employees">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.querySelector("#getEmployee").addEventListener("click", loadEmployee);
+
+        function loadEmployee() {
+
+            var loadImage = document.querySelector("#loading");
+            loadImage.style.display = "block";
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "employees.json", true);
+            setTimeout(() => {
+                xhr.onload = function () {
+                    loadImage.style.display = "none";
+                    if (this.status === 200) {
+                        console.log(this.responseText);
+                        let employees = JSON.parse(this.responseText);
+                        let employeesHtml = ``;
+                        employees.forEach(element => {
+                            employeesHtml += `
+                            <tr>
+                                <td>${element.firstName}</td>
+                                <td>${element.lastName}</td>
+                                <td>${element.age}</td>
+                                <td>${element.retired}</td>
+                                </tr>
+                            `;
+                        });
+
+
+                        document.querySelector("#employees").innerHTML = employeesHtml;
+
+                    }
+                }
+                xhr.send();
+            }, 1500)
+
+
+        }
+    </script>
+</body>
+</html>

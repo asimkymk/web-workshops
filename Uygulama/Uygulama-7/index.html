@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Employee(name, salary) {
+            if (!(this instanceof Employee)){
+                return new Employee(name,salary);
+            }
+            this.name = name;
+            this.salary = salary;
+
+            this.maasHesapla = function () {
+                return this.salary * 12
+            }
+
+            this.vergiHesapla = function () {
+                if (this.maasHesapla() > 30000) {
+                    return this.maasHesapla() * 0.27;
+                } else if (this.maasHesapla() > 20000) {
+                    return this.maasHesapla() * 0.25;
+                } else {
+                    return this.maasHesapla() * 0.2;
+                }
+            }
+
+        }
+
+        var calisan1 = new Employee("Asim", 2000);
+        console.log(calisan1.maasHesapla());
+        console.log(calisan1.vergiHesapla());
+
+    </script>
+</body>
+</html>

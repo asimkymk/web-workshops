@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+     <meta name="viewport" content="width=device-width">
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .navbar{
+            background: goldenrod;
+            display:flex;
+            flex-flow: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        .item{
+            height: 40px;
+            padding:10px;
+            color:White;
+            cursor:pointer;
+            text-align: center;
+        }
+        .item:hover{
+            background-color:rgb(233,184,61);
+        }
+        .item:active{
+            opacity: 0.8;
+        }
+        @media all and (max-width:800px) {
+            .navbar{
+                justify-content: space-around;
+            }
+        }
+        @media all and (max-width:600px) {
+            .navbar{
+                flex-flow: column;
+                align-items: stretch;
+            }
+            .item{
+                border-top: 1px solid rgba(255,255,255,0.3);
+                border-bottom: 1px solid rgba(0,0,0,0.1);
+            }
+            .item:last-child{
+                border-bottom: none;
+            }
+        }
+    
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        
+        <div class="item">Anasayfa</div>
+        <div class="item">Hakkımda</div>
+        <div class="item">Gizlilik</div>
+        <div class="item">Çıkış</div>
+        
+    </div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+.{
+    margin:0px;
+    padding:0px;
+}
+
+.yanyana{
+    float:left;
+}
+.solpanel{
+    width:75%;
+    
+    
+    height: 300px;
+}
+.blog-post{
+    background-color: goldenrod;
+    height: 100px;
+    margin:5px;
+}
+#others,#tags{
+    height: 150px;
+    margin:5px;
+    padding:1px;
+}
+#others{
+    background-color: darkseagreen;
+}
+#tags{
+    background-color: beige;
+}
+.sagpanel{
+    width:25%;
+    height: 300px;
+    
+    
+}

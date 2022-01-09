@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //spread operator
+
+        function getTotal(a, b, c) {
+            return a + b + c;
+        }
+
+        let numbers = [10, 20, 30];
+
+        //es5
+        console.log(getTotal.apply(null, numbers));
+
+        //es6
+        console.log(getTotal(...numbers));
+
+    </script>
+</body>
+</html>

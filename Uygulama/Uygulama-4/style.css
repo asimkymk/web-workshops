@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+    font-weight: 400;
+}
+body{
+    font-size:1.6rem;
+    font-family: 'Lato', sans-serif;
+    line-height: 1.5;
+    background-color:#fff;
+}
+.nav-container{
+    background-color:#293C51;
+    height: 10rem;
+}
+a{
+    text-decoration: none;
+}
+.logo-container{
+    
+    width:auto;
+    display: inline-block;
+     
+}
+nav{
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-weight: 700px;
+    
+}
+.logo{
+    color:white;
+    font-weight: 700;
+    text-align: center;
+    font-size:4rem;
+    margin-left:20%;
+}
+.menu-container{
+    float:right;
+    padding:3rem;
+    margin-right:3rem;
+    
+}
+.menu-container ul{
+    list-style: none;
+    margin-right: 7rem;
+}
+.menu-container li{
+    display:inline;
+    margin-right:1rem;
+}
+.menubtn{
+    color:white;
+    font-family: Montserrat;
+    font-weight: 700;
+    font-size: 1.8rem;
+}
+.menubtn:hover, .logo:hover{
+    color:#1ABC9C;
+    
+}
+.container{
+    background:#1ABC9C;
+    height:70rem;
+    color:white;
+}
+.icon{
+    margin:auto;
+        justify-content: center;
+    margin-left:40%;
+    width:20%;
+    padding: 5rem;
+    
+}
+.container{
+    font-family: Montserrat;
+}
+.main-content{
+    color:white;
+    font-weight: 700;
+    font-size:7rem;
+    margin-left:auto;
+    text-align: center;
+    
+}
+.star{
+    font-size:3rem;
+    text-align:center;
+    margin-left:auto;
+}
+.sub-content{
+    font-size:2rem;
+    text-align: center;
+    margin-left:auto;
+    font-family: Montserrat;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media screen and(max-width:1400px) {
+    html{
+        font-size: 6px;
+    }
+    .logo-container{
+        margin:0;
+    }
+}

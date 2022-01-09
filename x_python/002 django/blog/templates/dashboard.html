@@ -1,0 +1,53 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h3>Kontrol Paneli</h3>
+<hr>
+<p>Hoşgeldiniz , <small>{{request.user.username}}</small></p>
+<hr>
+<a href="/articles/addarticle" class="btn btn-primary">Makale Oluştur</a>
+<hr>
+<h4>Size ait Makaleler</h4>
+<hr>
+{% if articles %}
+<ul class="list-group">
+  
+
+
+    <table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">Makale Başlığı</th>
+      <th scope="col">Tarih</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for article in articles %}
+    <tr>
+        <th>{{article.id}}</th>
+        <td><a href="/articles/{{article.id}}">{{article.title}}</a></td>
+        <td>{{article.created_date}}</td>
+        <td>
+        <a href="/articles/editarticle" class="btn btn-warning">Düzenle</a>
+
+        </td>
+        <td>
+        <a href="articles/deletearticle" class="btn btn-danger">Sil</a>
+        </td>
+    </tr>
+  {% endfor %}
+    
+  </tbody>
+</table>
+
+ </ul>
+{% else %}
+<div class="alert alert-primary">
+    Herhangi bir makaleniz henüz bulunmuyor.
+</div>
+{% endif %}
+
+{% endblock body %}

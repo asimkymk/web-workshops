@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab Ödevi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .head {
+
+            overflow: hidden;
+
+        }
+
+        a {
+            text-decoration: none;
+          
+        }
+
+        body {
+              -webkit-animation: fadein 2s;
+        }
+
+        @-webkit-keyframes fadein {
+        from { opacity: 0; }
+        to { opacity: 1; }
+        }
+
+        .image {
+            width: 100%;
+            background-image:
+                linear-gradient(to left bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                url("https://miro.medium.com/max/1094/1*QFR92mUXfyh6Y_OeG-m0eA.jpeg");
+            height: 85vh;
+            background-size: cover;
+            background-position: top;
+
+            transition: transform 2s;
+
+        }
+
+        .head:hover .image {
+            transform: scale(1.5);
+
+        }
+
+        .head:hover .main-text,
+        .head:hover .sub-text {
+            opacity: 0.8;
+            cursor: default;
+        }
+
+        .total-text {
+            text-transform: uppercase;
+            color: #a393bf;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            text-align: center;
+            transform: translate(-50%, -50%)
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .main-text {
+            font-size: 50px;
+            font-family: monospace;
+            font-weight: 700;
+            display: block;
+            letter-spacing: 10px;
+        }
+
+        .sub-text {
+            font-size: 35px;
+            font-family: monospace;
+            display: block;
+            letter-spacing: 10px;
+        }
+
+        .section-a {
+            background-color: #453750;
+        }
+
+        .section-a h1 {
+            font-family: monospace;
+            text-align: center;
+            padding: 2rem;
+            color: #a393bf;
+        }
+
+        .section-a a {
+            color: #a393bf;
+            font-size: 20px;
+            font-family: "Century Gothic";
+
+        }
+
+        .section-a a:hover {
+            color: lightgray;
+        }
+
+        .section-a a:active {
+            color: #9882ac;
+        }
+
+        .section-a ul {
+            text-align: center;
+
+        }
+
+        .section-a ul li {
+            display: inline-block;
+            margin-right: 5rem;
+            margin-bottom: 2rem;
+        }
+
+        table {
+            text-align: center;
+            width: 80%;
+            margin: auto;
+            color: lightgray;
+            font-family: "Segoe UI";
+            border-collapse: collapse;
+            cursor: default;
+            margin-bottom: 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .section-b {
+            background-color: silver;
+            padding-bottom: 1rem;
+
+        }
+
+        .section-b h1 {
+            font-family: monospace;
+            text-align: center;
+            padding: 2rem;
+            color: #73648a;
+
+        }
+
+        thead {
+            background-color: #453750;
+        }
+
+        tbody tr:nth-last-of-type(even) {
+            background-color: #73648a;
+        }
+
+        tbody tr:nth-last-of-type(odd) {
+            background-color: #9882ac;
+        }
+
+        tr:hover {
+            opacity: 0.7;
+        }
+
+        table td,
+        table th {
+            border: 1px solid #ddd;
+            padding: 1rem;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="head">
+            <div class="image"></div>
+            <div class="total-text">
+                <span class="main-text">Asım Kaymak</span>
+                <span class="sub-text">1306180004</span>
+
+            </div>
+        </div>
+    </header>
+    <main>
+
+        <div class="section-a">
+            <h1>Aldığım Dersler</h1>
+            <ul>
+                <li><a href="https://ebs.istanbulc.edu.tr/home/izlence/?id=693698&bid=1092" target="_blank">Programming Applications</a></li>
+                <li><a href="https://ebs.istanbulc.edu.tr/home/izlence/?id=693695&bid=1092" target="_blank">Mikroişlemciler</a></li>
+                <li><a href="https://ebs.istanbulc.edu.tr/home/izlence/?id=693696&bid=1092" target="_blank">Lojik Devre Laboratuvarı</a></li>
+            </ul>
+        </div>
+
+
+        <div class="section-b">
+
+            <h1>Derslerin İçerikleri</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Ders Adı</th>
+                        <th>Ders Kredisi</th>
+                        <th>Ders Amacı</th>
+                    </tr>
+
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>Programming Applications</td>
+                        <td rowspan="2">3</td>
+                        <td>Karmaşık yazılım projelerinde Nesneye Yönelik Programlama ve UML ile tasarım aşamasından kodlama aşamasına kadarki süreç. Daha kaliteli ve tekrar kullanılabilen proje geliştirme için gerekli programlama teknikleri ve tasarım yöntemleri. Günümüzde kullanılmakta olan Nesneye Yönelik Programlamaya dayalı web uygulama teknolojileri. Masaüstü ve web uygulamalarında veritabanına bağlanma. Proje, ödev ve laboratuvar çalışmaları ile J2EE platformunda program geliştirme.</td>
+                    </tr>
+                    <tr>
+                        <td>Mikroişlemciler</td>
+                        <td>Bu dersin amacı mikroişlemciler hakkında bilgi edindirmek, Intel mikroişlemcilerine ilişkin kapsamlı bilgi vermek ve programlama tekniklerinin öğretilmesidir.</td>
+                    </tr>
+                    <tr>
+                        <td>Lojik Devre Laboratuvarı</td>
+                        <td>1</td>
+                        <td>Dersin amacı temel lojik devreleri detaylarını, kombinezonsal ve ardışıl devreleri tasarlamayı, analiz etmeyi ve gerçeklemeyi öğretmektir.</td>
+                    </tr>
+
+                </tbody>
+            </table>
+
+
+        </div>
+    </main>
+
+</body>
+
+</html>

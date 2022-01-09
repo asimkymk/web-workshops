@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="-">
+<head>
+    <meta charset="++-">
+    <meta name="viewport"
+          content="width=-, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //res parameters
+        //es6
+        function sumES6(...arr) {
+            let result = 0;
+            arr.forEach(item => result += item);
+            return result;
+        }
+
+        console.log(sumES6(10, 20, 30));
+    </script>
+</body>
+</html>

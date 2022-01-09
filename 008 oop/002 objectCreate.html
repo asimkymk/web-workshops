@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let personProto = {
+            calculateAge: function () {
+                return 2018 - this.yearOfBirth;
+            }
+        }
+        console.log(personProto)
+
+        let yigit = Object.create(personProto);
+        console.log(yigit);
+    </script>
+</body>
+</html>

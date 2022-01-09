@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p id="date">
+
+    </p>
+    <h1>Trafige Cikis Uygulaması</h1>
+    <p>Tarih : 04.20.2016</p>
+    <p id="tarih1">Süre</p>
+    <p id="tarih2">Süre</p>
+    <p id="tarih3">Süre</p>
+    <p id="tarih4">Süre</p>
+    <script>
+        let d = new Date();
+        document.getElementById("date").innerText = d;
+
+
+        var tarih = new Date("04/20/2016");
+        tarih.setHours(0, 0, 0, 0);
+        var tarih1 = Math.floor((Date.now() - tarih.getTime()) / (1000 * 60 * 60 * 24));
+        console.log(tarih1);
+        if (tarih1 <= 365) {
+            document.getElementById("tarih1").innerText = '1. servis bakım süreniz geldi.';
+            document.getElementById("tarih2").innerText = '2. servis bakım sürenize daha var.';
+            document.getElementById("tarih3").innerText = '3. servis bakım sürenize daha var.';
+
+        } else if (tarih1 > 365 && tarih1 <= 365 * 2) {
+            document.getElementById("tarih1").innerText = '1. servis bakım süreniz geçti.';
+            document.getElementById("tarih2").innerText = '2. servis bakım süreniz geldi';
+            document.getElementById("tarih3").innerText = '3. servis bakım sürenize daha var.';
+        } else if (tarih1 > 365 * 2 && tarih1 <= 365 * 3) {
+            document.getElementById("tarih1").innerText = '1. servis bakım süreniz geçti.';
+            document.getElementById("tarih2").innerText = '2. servis bakım süreniz geçti';
+            document.getElementById("tarih3").innerText = '3. servis bakım süreniz geldi.';
+        } else {
+            document.getElementById("tarih1").innerText = '1. servis bakım süreniz geçti.';
+            document.getElementById("tarih2").innerText = '2. servis bakım süreniz geçti';
+            document.getElementById("tarih3").innerText = '3. servis bakım süreniz geçti.';
+            document.getElementById("tarih4").innerText = 'Yeni bakım tarihi alınız.';
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var products = [
+            {id: 1, name: "Samsung S8", price: 3000},
+            {id: 2, name: "Samsung S7", price: 2000},
+            {id: 3, name: "Samsung S6", price: 1000}
+        ]
+
+        function addProduct(prd,callback) {
+            setTimeout(() => {
+                products.push(prd);
+                callback();
+
+            }, 2000);
+
+        }
+
+        function getProducts() {
+            setTimeout(() => {
+                products.forEach(p => {
+                    console.log(p.name);
+                });
+            }, 1000)
+        }
+
+        addProduct({id: 4, name: "Samsung S5", price: 500},getProducts);
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        #box {
+            position: absolute;
+            top: 50px;
+            left: 10px;
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="animate">
+        Animate
+    </button>
+    <button id="unanimate">
+        Unanimate
+    </button>
+    <div id="box">Merhaba</div>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br>
+    <p>Sıfırdan Web Developer Eğitimi</p>
+    <button id="hide">Hide</button>
+    <button id="show">Show</button>
+    <button id="toggle">Toggle</button>
+    <button id="slideup">Slide Up</button>
+    <button id="slidedown">Slide Down</button>
+    <button id="slidetoggle">Slide Toggle</button>
+    <button id="fadein">Fade In</button>
+    <button id="fadeout">Fade Out</button>
+    <button id="fadetoggle">Fade Toggle</button>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#hide").click(function () {
+                $("p").hide("slow");
+            });
+
+            $("#show").click(function () {
+                $("p").show(1000, function () {
+                    alert("paragraf gösterildi");
+                });
+            });
+            $("#toggle").click(function () {
+                $("p").toggle("fast");
+            });
+
+            $("#slideup").click(function () {
+                $("p").slideUp("fast");
+            });
+            $("#slidedown").click(function () {
+                $("p").slideDown("fast");
+            });
+            $("#slidetoggle").click(function () {
+                $("p").slideToggle("slow");
+            });
+            $("#fadein").click(function () {
+                $("p").fadeIn("slow");
+            });
+            $("#fadeout").click(function () {
+                $("p").fadeOut("slow");
+            });
+            $("#fadetoggle").click(function () {
+                $("p").fadeToggle("slow");
+            });
+            $("#animate").click(function () {
+                $("#box").animate({
+                    left: "200px",
+                    width: "300px",
+                    height: "300px"
+                }, 1500);
+                $("#box").animate({
+                    fontSize: "30px"
+                }, 1500);
+
+            });
+
+
+        })
+
+
+    </script>
+</body>
+</html>

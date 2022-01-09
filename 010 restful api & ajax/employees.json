@@ -1,0 +1,7 @@
+[
+    
+        {"firstName" : "Asım", "lastName" : "Kaymak","age":20,"retired":false},
+        {"firstName" : "Hatice", "lastName" : "Kaymak","age":19,"retired":true},
+        {"firstName" : "Feyza", "lastName" : "Kaymak","age":23,"retired":false}
+    
+]

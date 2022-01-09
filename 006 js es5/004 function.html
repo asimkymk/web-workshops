@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+
+        function yasHesapla(dogumYili) {
+            let d = new Date();
+            return d.getFullYear() - dogumYili;
+
+        }
+
+        const sum = function () {
+            let top = 0;
+            for (let i = 0; i < arguments.length; i++) {
+                top += arguments[i];
+            }
+            return top;
+        }
+
+        console.log(yasHesapla(2000));
+        console.log(sum(21, 323, 445, 12, -98, -1000, 23, 150, 12, 112));
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+table td, table th{
+    border:1px solid #ddd;
+    padding: 6px;
+}
+thead tr {
+    background-color:dodgerblue;
+    color:white;
+    height: 30px;
+    text-align: left;
+}
+tbody tr{
+    height:30px;
+}
+tbody tr:nth-of-type(odd){
+    background-color:white;
+}
+
+tbody tr:nth-of-type(even){
+    background-color:lightgray;
+}
+tbody tr:hover{
+    background-color:gray;
+}
+tbody tr:active{
+    background-color:darkgray;
+}

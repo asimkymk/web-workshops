@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+    </title>
+
+    <style>
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+        }
+
+        li {
+            display: inline-block;
+            float: left;
+            margin-right: 1px;
+        }
+
+        li a {
+            background: #2f3036;
+            color: white;
+            display: block;
+            min-width: 140px;
+            list-style: none;
+            text-decoration: none;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-family: "Helvetica Neue", Helvetica, Arial, "sans-serif";
+        }
+
+        li a:hover {
+            background: #19C589;
+        }
+        li:hover ul a{
+            background:#f3f3f3;
+            color:#2f3036;
+            height: 40px;
+            line-height: 40px;
+            
+        }
+        li:hover ul a:hover{
+            background: #19C589;
+            color:white;
+        }
+        li ul li{
+            display:block;
+            float:none;
+        }
+        li ul li a{
+           text-align: left;
+            min-width: 100px;
+            padding: 0 20px;
+        }
+        .hidden{
+            display: none;
+        }
+        ul li a:hover+ .hidden, .hidden:hover{
+            display:block;
+        }
+        li:hover a{
+           background: #19C589;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <ul>
+
+
+        <li>
+
+            <a href="">AnaSayfa</a>
+        </li>
+        <li>
+
+            <a href="">Hakkımızda</a>
+        </li>
+        <li>
+
+            <a href="">Kurslar</a>
+            <ul class="hidden">
+                <li>
+
+                    <a href="">AnaSayfa</a>
+                </li>
+                <li>
+
+                    <a href="">Hakkımızda</a>
+                </li>
+                <li>
+
+                    <a href="">Kurslar</a>
+                </li>
+            </ul>
+        </li>
+        <li>
+
+            <a href="">Makale</a>
+        </li>
+        <li>
+
+            <a href="">İletişim</a>
+        </li>
+
+    </ul>
+
+
+</body>
+
+</html>

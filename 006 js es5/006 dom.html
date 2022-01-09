@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css">
+
+    <title>My Task List</title>
+    <style>
+
+        a {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container p-3">
+        <h1 class="app-title" id="header">To Do App</h1>
+        <div class="card">
+            <div class="card-header">
+                New Task
+            </div>
+            <div class="card-body">
+                <form id="addTaskForm">
+                    <div class="input-group mb-3">
+                        <input id="txtTaskName" name="taskName" type="text" class="form-control"
+                               placeholder="Type a new task" aria-describedby="btnAddNewTask">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button" id="btnAddNewTask">
+                                <i class="fas fa-plus"></i>
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="card mt-3">
+            <div class="card-header">
+                Task List
+                <a id="btnDeleteAll" href="#" class="btn btn-outline-danger btn-sm delete-all float-right">
+                    Delete All
+                </a>
+            </div>
+
+            <ul id="task-list" class="list-group">
+                <li class="list-group-item list-group-item-secondary">To do item
+                    <a href="#" class="delete-item float-right">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+                <li class="list-group-item list-group-item-secondary">To do item
+                    <a href="#" class="delete-item float-right">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+                <li class="list-group-item list-group-item-secondary">To do item
+                    <a href="#" class="delete-item float-right">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+                <li class="list-group-item list-group-item-danger">To do item
+                    <a href="#" class="delete-item float-right">
+                        <i class="fas fa-times"></i>
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        //TEKLİ ELEMAN SEÇİMİ
+        /*
+            let val;
+            val = document.getElementById('header');
+            val.style.fontSize = '45px';
+            val.style.color = "red";
+            val.style.fontWeight = "700";
+            //val.style.display = "none";
+
+            val = document.getElementById('header').innerHTML = "<b>My toDo App</b>";
+                */
+
+        //document.querySelector(".card-header");
+        // document.querySelector("li").style.color = "red";
+        //document.querySelector("li:last-child").style.color = "blue";
+        // document.querySelector("li:nth-child(2)").style.color = "yellow";
+        //document.querySelector("li:nth-child(3)").textContent = "task Item";
+        //document.querySelector("li").classList.add("active");
+
+        // ÇOKLU ELEMAN SEÇİMİ
+        /*
+        let val = document.getElementsByClassName("list-group-item");
+        val[1].style.color = "blue";
+        val[1].style.fontSize = "25px";
+        console.log(val[2]);
+        val = document.getElementById("task-list");
+        val = val.getElementsByTagName('a');
+        console.log(val);
+
+        val = document.querySelectorAll("li");
+        console.log(val);
+        val.forEach(function (item, index) {
+            item.textContent = 'asım';
+        });*/
+
+        //Elemenetler üzeirnde gezinme
+        /*
+                let val;
+                let list = document.querySelector(".list-group");
+
+                val = list;
+                console.log(val);
+                val = list.childNodes;
+                console.log(val);
+                console.log(val[0])*/
+        //element silme ve güncelleme
+
+        const taskList = document.querySelector("#task-list");
+        //taskList.remove();
+        //taskList.childNodes[7].remove();
+        //taskList.removeChild(taskList.children[3]);
+
+        //removing attributes
+        //taskList.children[1].removeAttribute("class");
+
+        //replacing elements
+        /*
+                const cardHeader = document.querySelector(".card-header");
+                const h2 = document.createElement('h2');
+                h2.setAttribute("class", "card-header");
+                h2.appendChild(document.createTextNode("My List"));
+                const parent = document.querySelector(".card");
+                parent.replaceChild(h2, cardHeader);*/
+
+        //create element
+        /*
+        const li = document.createElement("li");
+        li.className = "list-group-item list-group-item-secondary";
+        li.setAttribute("title", "new item");
+        li.setAttribute("data-id", "5");
+        const text = document.createTextNode("new item");
+        li.appendChild(text);
+
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        a.className = "delete-item float-right";
+        a.innerHTML = "<i class='fas fa-times'></i>";
+        li.appendChild(a);
+
+        console.log(li);
+
+        //append to li
+        document.querySelector("#task-list").appendChild(li);*/
+
+        const carpi = document.querySelector("#task-list");
+        carpi.addEventListener("click", function (e) {
+            e.target.parent.remove();
+
+
+        });
+    </script>
+</body>
+
+</html>
+'+

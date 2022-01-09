@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>
+
+    </title>
+
+    <style>
+        body {
+            margin: 20px;
+        }
+
+        .form-control {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 7px 12px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+        }
+        .form-control:focus {
+            
+            border: 1px solid #80bdff;
+            outline:0;
+        }
+        .form-group{
+            margin-bottom:6px;
+        }
+        label{
+            display:inline-block;
+            margin-bottom:4px;
+        }
+        .btn{
+            padding:6px 12px;
+            border-radius: 4px;
+            background-color: #007bff;
+            border: 1px solid #007bff;
+            color:white;
+            
+        }
+        .btn:hover{
+            background-color: #0069d9;
+            border: 1px solid #0062cc;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="form-group">
+       <label for="fullName">FullName</label>
+        <input type="text" name="fullName" class="form-control">
+    </div>
+
+    <div class="form-group">
+       <label for="email">Email</label>
+        <input type="text" name="email" class="form-control">
+    </div>
+
+    <div class="form-group">
+       <label for="mesaj">Mesaj</label>
+        <textarea name="mesaj" id="" class="form-control"></textarea>
+    </div>
+    <div class="form-group">
+       <label for="country">Country</label>
+        <select name="country" id="" class="form-control">
+
+            <option value="türkiye">türkiye</option>
+            <option value="almanya">almanya</option>
+            <option value="ingiltere">ingiltere</option>
+
+        </select>
+    </div>
+    <div class="form-group" class="form-control">
+        <input type="submit" value="Submit" class="btn">
+    </div>
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+p[title]{
+    border:1px solid gray;
+    padding:10px;
+}
+p[title="third"]{
+    background-color:gold;
+}
+
+p[title="forth"]{
+    background-color:red;
+}
+
+input[type="text"]{
+    display:block;
+    width:150px;
+    padding:10px;
+}
+
+button[type="submit"]{
+    color:blue;
+    background-color: green;
+    padding: 8px 16px;
+}

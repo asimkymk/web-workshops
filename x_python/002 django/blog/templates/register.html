@@ -1,0 +1,21 @@
+
+{% extends "layout.html" %}
+
+{% block body %}
+
+<h3>
+    Kayıt Olun
+</h3>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+{{form.as_p}}
+
+<br>
+<button type="submit" class="btn btn-primary">Kayıt Ol</button>
+
+</form>
+
+
+
+{% endblock body %}

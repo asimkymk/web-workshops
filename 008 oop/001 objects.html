@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    
+    <script>
+
+        let val;
+        let num = 10;
+        //object literals
+        let yigit = {
+            name: "yigit",
+            yearofBirth: 2010,
+            job: "Bebek"
+        }
+
+        function Person(name, yearOfBirth, job) {
+            this.name = name;
+            this.yearOfBirth = yearOfBirth;
+            this.job = job;
+            console.log(this)
+            this.calculateAge = function () {
+                return 2020 - this.yearOfBirth;
+            }
+        }
+
+        Person.prototype.calculateAge2 = function () {
+            return 2020 - this.yearOfBirth;
+        }
+
+        val = num;
+        val = yigit;
+        console.log(val)
+        yigit = new Person("Yigit", 2010, "Bebek");
+        let emel = new Person("Emel", 2000, "öğrenci");
+        console.log(emel.calculateAge());
+        console.log(emel.calculateAge2());
+    </script>
+</body>
+</html>

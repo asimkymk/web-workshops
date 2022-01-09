@@ -1,0 +1,16 @@
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\consoleApp.exe
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\consoleApp.deps.json
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\consoleApp.runtimeconfig.json
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\consoleApp.runtimeconfig.dev.json
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\consoleApp.dll
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\ref\consoleApp.dll
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\bin\Debug\net5.0\consoleApp.pdb
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.csproj.AssemblyReference.cache
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.AssemblyInfoInputs.cache
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.AssemblyInfo.cs
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.csproj.CoreCompileInputs.cache
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.dll
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\ref\consoleApp.dll
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.pdb
+C:\Users\asimk\Desktop\web\015 dotnet\001 firstLook\consoleApp\obj\Debug\net5.0\consoleApp.genruntimeconfig.cache

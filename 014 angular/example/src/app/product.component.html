@@ -1,0 +1,164 @@
+<!--
+
+<div (click)="onDivClicked()" style="width: 500px;height: 500px;background-color: red;">
+
+
+<button name="btn1" (click) = "onSubmit($event)">Submit</button>
+
+<button name="btn2" (click) = "onSubmit($event)">Submit</button>
+
+</div>
+
+
+<input [(ngModel)]="email" (keyup.enter) = "onKeyUp()">
+<br>
+<br>
+<h4> Title Pipes</h4>
+
+<p> {{title}}</p>
+<p> {{title | lowercase}}</p>
+<p> {{title | uppercase }}</p>
+<p> {{ title | titlecase }}</p> <br> <br>
+
+<h4> Date Pipe</h4>
+
+<p>{{today}}</p>
+
+<p> {{ today | date }}</p>
+
+<p> {{ today | date:'fullDate' }}</p>
+
+<p> {{ today | date:'medium' }}</p>
+
+<p> {{ today | date:'shortDate' }}</p>
+
+<p> {{ today | date:'shortTime' }}</p>
+
+<p> {{ today | date:'day' }}</p>
+
+<p> {{ today | date:'h:mm:ss' }}</p>
+
+<br><br>
+<h4>Decimal Pipe
+</h4>
+
+<p>{{students}}</p>
+
+<p> {{students | number }}</p>
+
+<p>{{price | number:'1.2-2'}}</p>
+
+<br><br>
+<h4>Currency Price</h4>
+<p>{{price}}</p>
+<p>{{price | currency: 'EUR'}}</p>
+
+<br><br>
+<h4>Percent Pipe
+</h4>
+<p>{{completed}}</p>
+<p>{{completed  | percent }}</p>
+
+<br><br>
+<h4>Custom Pipe</h4>
+<p>{{text}}</p>
+<p>{{text | summary:15}}</p>
+
+<br><br><br>
+
+
+<div *ngIf="model.getProducts().length>0; then productList else noProducts" class="bg-primary text-white m-2 p-2">
+
+</div>
+
+<ng-template #productList>
+  <div class="bg-primary text-white m-2 p-2">
+    There are {{model.getProducts().length }} products in the repository.
+  </div>
+
+</ng-template>
+
+<ng-template #noProducts>
+  There are no products in the repository.
+</ng-template>
+
+
+<div [hidden]="model.getProducts().length == 0" class="bg-primary text-white m-2 p-2">
+  There are {{model.getProducts().length }} products in the repository.
+</div>
+<div [hidden]="model.getProducts().length > 0" class="bg-primary text-white m-2 p-2">
+  There are no products in the repository.
+</div>
+
+<br><br>
+
+<ul class="list-group mt-2">
+  <li *ngFor="let product of model.getProducts();">
+      {{product.name}}
+  </li>
+</ul>
+
+
+<input type="text" appInputEmail>
+
+</!-->
+<admin-products>
+
+</admin-products>
+
+
+<br>
+<br>
+
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <div class="m-3">
+        <form #form="ngForm" (ngSubmit)="submitForm(form)">
+
+          <div class="bg-danger text-white p-3 my-2" *ngIf="formSubmitted && form.invalid">
+            Bir hata var
+          </div>
+
+        <div class="bg-info text-white m-2 p-2">
+          {{jsonProduct}}
+        </div>
+
+        <div class="form-group">
+          <label>Name</label>
+          <input required minlength="3" maxlength="10" pattern="^[A-Za-z ]+$" name="n ame" #name = "ngModel" ngModel [(ngModel)]="newProduct.name" type="text" class="form-control">
+          <div class="alert alert-danger alert-sm mt-1"  *ngIf="!name.valid && name.touched">
+            <p *ngFor="let error of getValidationErrors(name)">
+              {{error}}
+            </p>
+
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input required name="pDescription" #description = "ngModel" ngModel [(ngModel)]="newProduct.description" type="text" class="form-control">
+          <div class="alert alert-danger alert-sm mt-1"  *ngIf="!description.valid && description.touched">
+            Description is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Price</label>
+          <input required name="pPrice" #price = "ngModel" ngModel [(ngModel)]="newProduct.price" type="text" class="form-control">
+          <div class="alert alert-danger alert-sm mt-1"  *ngIf="!price.valid && price.touched">
+            Price is required.
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Image Url</label>
+          <input required name="pImageUrl" #imageUrl = "ngModel" ngModel [(ngModel)]="newProduct.imageUrl" type="text" class="form-control">
+          <div class="alert alert-danger alert-sm mt-1"  *ngIf="!imageUrl.valid && imageUrl.touched">
+            Image is required.
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add</button>
+      </form>
+      </div>
+    </div>
+  </div>
+</div>

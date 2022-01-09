@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+
+<div style="margin-top:100px;" class="container">
+
+   {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    
+    {% for category, message in messages %}
+      <div class="alert alert-{{ category }}" role="alert">{{ message }}</div>
+    {% endfor %}
+    
+  {% endif %}
+{% endwith %}
+
+    <h3>Todo List</h3>
+    <hr>
+    <form action="/add" method="post">
+  <div class="form-group">
+    <label for="formGroupExampleInput">Todo</label>
+    <input type="text" name="title" class="form-control" id="formGroupExampleInput" placeholder="ToDo Gir">
+    <br><button class="btn btn-primary">Ekle</button>
+  </div>
+
+    </form>
+    <hr>
+
+
+
+    {% if todos %}
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">ToDo Başlık</th>
+      <th scope="col">Durum</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+
+  
+    {% for todo in todos %}
+        <tr>
+
+            <th scope="row">{{todo.id}}</th>
+            <td>{{todo.title}}</td>
+            
+            {% if todo.complete  %}
+                 
+                        <td><strong>Yapıldı</strong><td>
+                        <td><a class="btn btn-danger" href="/uncomplete/{{todo.id}}" method="post">Yapılmadı</a></td>
+                    
+            {% else %}
+             
+                    <td>Yapılmadı<td>
+                        <td><a class="btn btn-success" href="/complete/{{todo.id}}" method="post">Yapıldı</a></td>
+            {% endif %}
+               
+                
+            <td><a class="btn btn-danger" href="/delete/{{todo.id}}" method="post">ToDo Sil</a></td>
+
+        </tr>
+    
+    {% endfor %}
+  </tbody>
+</table>
+    {% else %}
+    <div class="alert alert-warning">
+    Şu anda herhangi bir ToDo bulunmuyor.</div>
+    {% endif %}
+
+    
+</div>
+    
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+</body>
+</html>
